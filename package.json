@@ -7,7 +7,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:dev": "jest",
-    "start:dev": "webpack-dev-server --mode development",
+    "start:dev": "webpack-dev-server --mode development --hot --inline",
     "start":"node index.js",
     "build:prod": "webpack --mode production",
     "build:dev": "webpack --mode development",
