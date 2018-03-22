@@ -14,6 +14,10 @@ app.get('/bundle.js', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'build/bundle.js'));
 });
 
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'index.html'));
+});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
 });
