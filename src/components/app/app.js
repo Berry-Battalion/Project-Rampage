@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Header from './header';
-import Welcome from './welcome';
+import Header from '../header/header';
+import Welcome from '../welcome/welcome';
 
 const App = () => {
     return (
