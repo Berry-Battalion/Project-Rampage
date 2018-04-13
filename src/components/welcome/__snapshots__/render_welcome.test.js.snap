@@ -1,7 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Welcome /> renders correctly 1`] = `
-<div>
-  Welcome!
+<div
+  className="sc-bdVaJa joQndy"
+>
+  <div>
+    Welcome!
+  </div>
+  <a
+    href="/signin"
+    onClick={[Function]}
+  >
+    Sign In
+  </a>
 </div>
 `;

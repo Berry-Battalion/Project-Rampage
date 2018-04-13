@@ -1,11 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-const Header = () => {
+const Nav = styled.nav`
+    grid-area: ${props => props.area};
+`;
+
+const Header = (props) => {
     return (
-        <div>
+        <Nav area={props.area}>
             Header
-        </div>
+        </Nav>
     )
+};
+
+Nav.propTypes = {
+    area: PropTypes.string
 };
 
 export default Header;

@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> renders correctly 1`] = `
-<div>
+<nav
+  className="sc-bdVaJa pEDwD"
+>
   Header
-</div>
+</nav>
 `;

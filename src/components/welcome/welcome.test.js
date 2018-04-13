@@ -10,6 +10,6 @@ describe('<Welcome />', () => {
     test('shows text "Welcome!"', () => {
         const wrapper = shallow(<Welcome />);
 
-        expect(wrapper.find('div').text()).toBe('Welcome!');
+        expect(wrapper.find('div').at(0).text()).toBe('Welcome!');
     })
 })
