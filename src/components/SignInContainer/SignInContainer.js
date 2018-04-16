@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router';
+import * as actions from '../../actions/index';
 
 import SignIn from './SignIn/SignIn';
 
@@ -23,9 +26,14 @@ class SignInContainer extends Component {
 
     onSubmitSignIn(event) {
         event.preventDefault();
-        console.log(this.state.credentials);
+        this.props.authenticateUser(this.state.credentials);
     }
     render() {
+
+        if(this.props.authenticated) {
+            return <Redirect to='/home'/>
+        }
+
         return (
             <SignIn 
                 area="content"
@@ -37,6 +45,12 @@ class SignInContainer extends Component {
             />
         )
     }
+};
+
+const mapStateToProps = state => {
+    return {
+        authenticated: state.auth.authenticated
+    }
 }
 
-export default SignInContainer;
+export default connect(mapStateToProps, actions)(SignInContainer);
