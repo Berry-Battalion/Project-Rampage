@@ -9,8 +9,5 @@ exports[`<App /> renders correctly 1`] = `
   >
     Header
   </nav>
-  <div>
-    WRONG!
-  </div>
 </div>
 `;
